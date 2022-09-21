@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prySp2Ocaranza", "prySp2Ocaranza\prySp2Ocaranza.csproj", "{AB1A4766-6BDC-49B6-8937-8268DD991566}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB1A4766-6BDC-49B6-8937-8268DD991566}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB1A4766-6BDC-49B6-8937-8268DD991566}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB1A4766-6BDC-49B6-8937-8268DD991566}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB1A4766-6BDC-49B6-8937-8268DD991566}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1C5A087C-9F75-405E-B882-882C7B16FB8F}
+	EndGlobalSection
+EndGlobal
