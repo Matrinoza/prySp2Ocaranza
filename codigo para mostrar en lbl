@@ -1,0 +1,38 @@
+private string[] lineas;
+
+public void Form_Load(..)
+{
+	lineas = File.ReadAlllines("ruta archivo");
+}   
+
+private void comboSexo_SelectedChangeCommited(...)
+{
+
+	LabelNombre.Text = ObtenerNombre(comboSexo.Text, comboFecha.Text);	
+	
+}
+
+
+private void comboFecha_SelectedChangeCommited(...)
+{
+
+	LabelNombre.Text = ObtenerNombre(comboSexo.Text, comboFecha.Text);	
+	
+}
+
+private string ObtenerNombre(string sexo, string fecha)
+{
+	if(comboSexo.Text == "")
+		return "";
+		
+	if(comboFecha.Text == "")
+		return "";
+
+	foreach(var linea in lineas)
+	{
+		string partes = linea.Split(',');
+		
+		if(partes[0] == sexo && partes[1] == fecha)
+			return partes[2];
+	}
+}
