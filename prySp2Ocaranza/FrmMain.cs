@@ -24,7 +24,7 @@ namespace prySp2Ocaranza
 
         private void CmbTipo_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (CmbTipo.SelectedIndex != -1) // metodo de habilitacion 
+            if (CmbTipo.SelectedIndex != -1) // metodo de habilitacion..
             {
                 CmbPersonas.Enabled = true;
             }

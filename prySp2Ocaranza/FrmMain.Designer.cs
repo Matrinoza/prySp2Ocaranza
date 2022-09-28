@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.GbCabaña = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.TxtDias = new System.Windows.Forms.TextBox();
             this.LblDias = new System.Windows.Forms.Label();
             this.CmbPersonas = new System.Windows.Forms.ComboBox();
@@ -54,7 +53,6 @@
             this.BtnAceptar = new System.Windows.Forms.Button();
             this.LblMuestra = new System.Windows.Forms.Label();
             this.GbCabaña.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.MrcAdcionales.SuspendLayout();
             this.MrcPago.SuspendLayout();
             this.GbDatos.SuspendLayout();
@@ -62,7 +60,6 @@
             // 
             // GbCabaña
             // 
-            this.GbCabaña.Controls.Add(this.numericUpDown1);
             this.GbCabaña.Controls.Add(this.TxtDias);
             this.GbCabaña.Controls.Add(this.LblDias);
             this.GbCabaña.Controls.Add(this.CmbPersonas);
@@ -77,13 +74,6 @@
             this.GbCabaña.TabIndex = 10;
             this.GbCabaña.TabStop = false;
             this.GbCabaña.Text = "Tipo de Cabaña";
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(410, 78);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(88, 24);
-            this.numericUpDown1.TabIndex = 17;
             // 
             // TxtDias
             // 
@@ -285,7 +275,6 @@
             // 
             // TxtNumero
             // 
-            this.TxtNumero.Enabled = false;
             this.TxtNumero.Location = new System.Drawing.Point(80, 108);
             this.TxtNumero.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtNumero.Name = "TxtNumero";
@@ -295,7 +284,6 @@
             // 
             // TxtNombre
             // 
-            this.TxtNombre.Enabled = false;
             this.TxtNombre.Location = new System.Drawing.Point(80, 47);
             this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.TxtNombre.Name = "TxtNombre";
@@ -325,7 +313,6 @@
             // 
             // BtnAceptar
             // 
-            this.BtnAceptar.Enabled = false;
             this.BtnAceptar.Location = new System.Drawing.Point(507, 563);
             this.BtnAceptar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.BtnAceptar.Name = "BtnAceptar";
@@ -363,7 +350,6 @@
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.GbCabaña.ResumeLayout(false);
             this.GbCabaña.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.MrcAdcionales.ResumeLayout(false);
             this.MrcAdcionales.PerformLayout();
             this.MrcPago.ResumeLayout(false);
@@ -398,7 +384,6 @@
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Button BtnAceptar;
         protected internal System.Windows.Forms.ComboBox CmbTipo;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label LblMuestra;
     }
 }
