@@ -19,7 +19,9 @@ namespace prySp2Ocaranza
 
         private void FrmMain_Load(object sender, EventArgs e)
         {
-           
+            CmbTipo.SelectedIndex = 0;
+            TxtDias.SelectedText = "1"; // dia fijo 1
+            CmbPersonas.SelectedIndex = 0; // deja en 0 lo seleccionado..
         }
 
         private void CmbTipo_SelectedIndexChanged(object sender, EventArgs e)
@@ -74,7 +76,10 @@ namespace prySp2Ocaranza
 
         private void RbTarjeta_CheckedChanged(object sender, EventArgs e)
         {
-           
+            if (RbTarjeta.Checked)
+            {
+                CmbTarjeta.Enabled = true;
+            }
         }
 
         private void MrcAdcionales_Enter(object sender, EventArgs e)
