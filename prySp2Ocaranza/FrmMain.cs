@@ -29,7 +29,7 @@ namespace prySp2Ocaranza
                 CmbPersonas.Enabled = true;
             }
 
-            if (CmbTipo.Text == "A")
+            if (CmbTipo.Text == "A") // informacion a mostrar en el ComboBox
             {
                 CmbPersonas.Items.Clear();
                 CmbPersonas.Items.Add(1);
@@ -38,9 +38,9 @@ namespace prySp2Ocaranza
                 CmbPersonas.Items.Add(4);
             }
 
-            if (CmbTipo.Text == "B")
+            if (CmbTipo.Text == "B") //Otra forma de cargarlos sin escribirlos
             {
-                CmbPersonas.Items.Clear();
+                CmbPersonas.Items.Clear(); // para que no se sobre carguen las opciones
                 CmbPersonas.Items.Add(1);
                 CmbPersonas.Items.Add(2);
                 CmbPersonas.Items.Add(3);
@@ -129,6 +129,36 @@ namespace prySp2Ocaranza
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void GbDatos_Enter(object sender, EventArgs e)
+        {
+            if (TxtDias.Text != "")
+            {
+                GbDatos.Enabled = true;
+            }
+        }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void TxtNumero_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtDias.Text != "")
+            {
+                TxtNumero.Enabled = true;
+                BtnAceptar.Enabled = true; 
+            }
+        }
+
+        private void TxtNombre_TextChanged(object sender, EventArgs e)
+        {
+            if (TxtDias.Text != "")
+            {
+                TxtDias.Enabled = true;
+            }
         }
     }
 }

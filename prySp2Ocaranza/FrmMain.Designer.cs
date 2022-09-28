@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.GbCabaña = new System.Windows.Forms.GroupBox();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.TxtDias = new System.Windows.Forms.TextBox();
             this.LblDias = new System.Windows.Forms.Label();
             this.CmbPersonas = new System.Windows.Forms.ComboBox();
@@ -47,17 +48,16 @@
             this.RbEfectivo = new System.Windows.Forms.RadioButton();
             this.GbDatos = new System.Windows.Forms.GroupBox();
             this.TxtNumero = new System.Windows.Forms.TextBox();
-            this.TxtNonbre = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
             this.LblNumero = new System.Windows.Forms.Label();
             this.LblNombre = new System.Windows.Forms.Label();
             this.BtnAceptar = new System.Windows.Forms.Button();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.LblMuestra = new System.Windows.Forms.Label();
             this.GbCabaña.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.MrcAdcionales.SuspendLayout();
             this.MrcPago.SuspendLayout();
             this.GbDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
             // GbCabaña
@@ -77,6 +77,13 @@
             this.GbCabaña.TabIndex = 10;
             this.GbCabaña.TabStop = false;
             this.GbCabaña.Text = "Tipo de Cabaña";
+            // 
+            // numericUpDown1
+            // 
+            this.numericUpDown1.Location = new System.Drawing.Point(410, 78);
+            this.numericUpDown1.Name = "numericUpDown1";
+            this.numericUpDown1.Size = new System.Drawing.Size(88, 24);
+            this.numericUpDown1.TabIndex = 17;
             // 
             // TxtDias
             // 
@@ -263,7 +270,7 @@
             // GbDatos
             // 
             this.GbDatos.Controls.Add(this.TxtNumero);
-            this.GbDatos.Controls.Add(this.TxtNonbre);
+            this.GbDatos.Controls.Add(this.TxtNombre);
             this.GbDatos.Controls.Add(this.LblNumero);
             this.GbDatos.Controls.Add(this.LblNombre);
             this.GbDatos.Location = new System.Drawing.Point(29, 386);
@@ -274,6 +281,7 @@
             this.GbDatos.TabIndex = 13;
             this.GbDatos.TabStop = false;
             this.GbDatos.Text = "Datos";
+            this.GbDatos.Enter += new System.EventHandler(this.GbDatos_Enter);
             // 
             // TxtNumero
             // 
@@ -283,15 +291,17 @@
             this.TxtNumero.Name = "TxtNumero";
             this.TxtNumero.Size = new System.Drawing.Size(522, 24);
             this.TxtNumero.TabIndex = 19;
+            this.TxtNumero.TextChanged += new System.EventHandler(this.TxtNumero_TextChanged);
             // 
-            // TxtNonbre
+            // TxtNombre
             // 
-            this.TxtNonbre.Enabled = false;
-            this.TxtNonbre.Location = new System.Drawing.Point(80, 47);
-            this.TxtNonbre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.TxtNonbre.Name = "TxtNonbre";
-            this.TxtNonbre.Size = new System.Drawing.Size(522, 24);
-            this.TxtNonbre.TabIndex = 17;
+            this.TxtNombre.Enabled = false;
+            this.TxtNombre.Location = new System.Drawing.Point(80, 47);
+            this.TxtNombre.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(522, 24);
+            this.TxtNombre.TabIndex = 17;
+            this.TxtNombre.TextChanged += new System.EventHandler(this.TxtNombre_TextChanged);
             // 
             // LblNumero
             // 
@@ -323,13 +333,7 @@
             this.BtnAceptar.TabIndex = 14;
             this.BtnAceptar.Text = "Aceptar";
             this.BtnAceptar.UseVisualStyleBackColor = true;
-            // 
-            // numericUpDown1
-            // 
-            this.numericUpDown1.Location = new System.Drawing.Point(410, 78);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(88, 24);
-            this.numericUpDown1.TabIndex = 17;
+            this.BtnAceptar.Click += new System.EventHandler(this.BtnAceptar_Click);
             // 
             // LblMuestra
             // 
@@ -353,19 +357,19 @@
             this.Controls.Add(this.GbCabaña);
             this.Font = new System.Drawing.Font("Bahnschrift Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmMain";
             this.Text = "Reserva de Cabañas";
             this.Load += new System.EventHandler(this.FrmMain_Load);
             this.GbCabaña.ResumeLayout(false);
             this.GbCabaña.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.MrcAdcionales.ResumeLayout(false);
             this.MrcAdcionales.PerformLayout();
             this.MrcPago.ResumeLayout(false);
             this.MrcPago.PerformLayout();
             this.GbDatos.ResumeLayout(false);
             this.GbDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -389,7 +393,7 @@
         private System.Windows.Forms.RadioButton RbEfectivo;
         private System.Windows.Forms.GroupBox GbDatos;
         private System.Windows.Forms.TextBox TxtNumero;
-        private System.Windows.Forms.TextBox TxtNonbre;
+        private System.Windows.Forms.TextBox TxtNombre;
         private System.Windows.Forms.Label LblNumero;
         private System.Windows.Forms.Label LblNombre;
         private System.Windows.Forms.Button BtnAceptar;
